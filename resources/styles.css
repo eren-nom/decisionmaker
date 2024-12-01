@@ -1,0 +1,283 @@
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+.site-header {
+    width: 100%;
+    text-align: center;
+    position: relative; 
+    color: #333;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.site-header::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/christmas.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.; 
+    z-index: -1; 
+}
+
+
+h1 {
+    font-size: 4rem;
+    position: relative;
+    z-index: 1; 
+    color: white;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 40px;
+    text-shadow: 
+        1px 1px 0px #333, /* shadow to the right and down */
+        -1px -1px 0px #333, /* shadow to the left and up */
+        1px -1px 0px #333,  /* shadow to the right and up */
+        -1px 1px 0px #333;  /* shadow to the left and down */
+    }
+    
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #80b889;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Social media navigation bar */
+.social-nav {
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 20px;
+    opacity: 0.9;
+    margin-top: 10px; 
+}
+
+
+.social-nav ul {
+    display: flex; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-nav li {
+    margin: 0 25px;
+}
+
+.social-nav a {
+    color: #57171b; 
+    font-size: 1.3rem; 
+    text-decoration: none; 
+}
+
+.social-nav a:hover {
+    color: #555; 
+}
+
+
+.container-header {
+    font-size: 1.7rem;
+    color: #333;
+
+}
+
+/* Container for questions */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+
+/* Individual questions */
+.question {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #effdf6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+}
+
+/* Omikuji section */
+.omikuji-container {
+    margin: 30px auto;
+    padding: 15px 40px;
+    border: 2px solid #ffebcd;
+    border-radius: 80px;
+    color: white;
+    background-color:  #57171b;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+.omikuji-container h2 {
+    margin: 0;
+}
+
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #57171b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(20, 63, 20);
+}
+
+.omikuji-container button {
+    background-color: rgb(161, 126, 61);
+    border-radius: 15px;
+    font-size: 1rem;
+    }
+    
+
+.omikuji-container button:hover {
+    background-color: rgb(20, 63, 20);
+}
+
+
+/* Results */
+.result {
+    font-weight: bold;
+    color: rgb(52, 114, 52);
+    margin-top: 10px;
+    font-size: 2rem;
+    display: none;
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    }
+
+#omikuji-description {
+        display: block; /* Shows the description initially */
+    }
+    
+#omikuji-result {
+        display: none; /* Hides the result initially */
+        color:white;
+    }
+
+
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #555;
+    line-height: 3rem;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) { /* For tablets and smaller screens */
+    h1 {
+        font-size: 3rem; 
+        padding: 8px 15px; 
+    }
+
+    .site-header h2 {
+        font-size: 2.5rem; 
+    }
+
+    .container-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+
+    .omikuji-container {
+        border-radius: 25px;
+        font-size: 1.2rem;
+        margin: 5px;
+        padding: 5px 10px;
+    }
+
+    .omikuji-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) { /* For mobile screens */
+    h1 {
+        font-size: 2rem; 
+        padding: 5px 10px; 
+    }
+
+    .site-header h2 {
+        font-size: 1.5rem; 
+    }
+
+    .container-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+
+    .omikuji-container {
+        width: 100%;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        margin: 5px;
+        padding: 5px 10px;
+    }
+
+    .omikuji-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+}
